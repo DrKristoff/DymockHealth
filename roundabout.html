@@ -6,14 +6,18 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/roundabout.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/roundabout.js"></script>
+<script src="js/roundabout.js"></script><script src="js/roundabout-shapes.js"></script>
 </head>
 
 <body>
 <div id="carouse-wrap">
   <ul id="carousel" class="top_slider roundabout-holder" style="margin-top: 200px;">
-      <li> <h1 style="background-color:white; color:black">Card 1</h1>
-        <p>The content will go here</p><iframe style="height=1000px" src="http://drkristoff.github.io/DymockHealth/"></iframe>
+    <li>
+      <div class="slide">
+        <h1 style="background-color:white; color:black">Card 1</h1>
+        <p>The content will go here</p>
+        <iframe style="height=1000px" src="http://drkristoff.github.io/DymockHealth/"></iframe>
+      </div>
     </li>
     <li>
       <div>
@@ -27,15 +31,15 @@
         <p>The content will go here</p>
       </div>
     </li>
-
-    <li> <span> <a class="view-project-button" href="#">View Project</a> </span> <img src="http://teslathemes.com/wp-content/uploads/2014/06/Sevenfold-WP-slider.png" alt="" class="slide" />
-    <li>
-    <li> <span> <a class="view-project-button" href="#">View Project</a> </span> <img src="http://teslathemes.com/wp-content/uploads/2014/06/Sevenfold-WP-slider.png" alt="" class="slide" />
-    <li>
+    <li> <span> <a class="view-project-button" href="#">View Project</a> </span> <img src="http://teslathemes.com/wp-content/uploads/2014/06/Sevenfold-WP-slider.png" alt="" class="slide" /> </li>
+    <li> <span> <a class="view-project-button" href="#">View Project</a> </span> <img src="http://teslathemes.com/wp-content/uploads/2014/06/Sevenfold-WP-slider.png" alt="" class="slide" /> </li>
   </ul>
 </div>
 <script>
-$('ul').roundabout();
+$('ul').roundabout({
+	shape: "lazysusan",
+	maxScale: 1,
+	minScale: 0.1});
 </script>
 </body>
 </html>
